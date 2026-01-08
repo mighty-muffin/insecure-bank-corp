@@ -1,0 +1,56 @@
+---
+site_name: IBC Documentation
+site_description: Documentation for the Insecure Bank application
+site_author: Mighty Muffin
+
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+  features:
+    # - navigation.tabs
+    # - navigation.sections
+    # - toc.integrated
+    - content.code.annotate
+    - content.code.copy
+
+markdown_extensions:
+  - footnotes:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: README.md
+  - Project Overview: overview.md
+  - Context: context.md
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Database: architecture/db.md
+      - Middleware: architecture/middleware.md
+  - Development:
+      - Setup: development/setup.md
+      - Running: development/running.md
+      - Docker: development/docker.md
+      - Dependencies: development/dependencies.md
+      - Code Quality: development/quality.md
+      - Contributing: development/contributing.md
+  - Pipeline:
+      - Overview: pipeline/overview.md
+      - Branches: pipeline/branches.md
+  - Security:
+      - Overview: security/overview.md
+      - Scenario 1: security/scenario-1.md
+      - Scenario 2: security/scenario-2.md
+      - Scenario 3: security/scenario-3.md
+      - Scenario 4: security/scenario-4.md
+      - Scenario 5: security/scenario-5.md
+      - Scenario 6: security/scenario-6.md
+  - Testing:
+      - Overview: testing/overview.md
